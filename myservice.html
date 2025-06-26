@@ -1,37 +1,308 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Red Connect</title>
-        <link rel="stylesheet" href="style.css"> 
-        <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
-    </head>
-    <body>
-        <header class="site-header">
-             <nav class="site-navigation">
-              <ul>
-                <li><a href="index.html" class="button">Home</a></li>
-                <li><a href="about.html" class="button">About Me</a></li>
-                <li><a href="myservice.html" class="button">My Services</a></li>
-                <li><a href="contact.html" class="button">Contact</a></li>
-              </ul>
-            </nav>
-          </header>
-          <div class="myservice">
-            <h1>My Services</h1>  
-            <img src="assets/it support.jpg" alt="it support" class="immagine-ridotta">
-              <p class="it support">IT Support and Remote Assistance</p>
-              <img src="assets/dash.jpg" alt="business solutions" class="immagine-ridotta">
-              <p class="business solutions">Automating Business Processes</p>
-              <img src="assets/data21_51_38.png" alt="data protection" class="immagine-ridotta">
-              <p class="data protection">Data Protection & Backup</p>
-           
-          </div>
-          <div class="footer">
-            <p>&copy; 2025 Red Connect. All rights reserved.</p>
-            <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
-            <p>Powered by <a href="#">Tony Russo</a></p>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Services - Responsive</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+        }
+
+        /* Header Navigation */
+        .header-nav {
+            background-color: #b8a89a;
+            padding: 10px;
+            display: flex;
+            gap: 2px;
+        }
+
+        .nav-item {
+            background-color: #a89888;
+            color: white;
+            padding: 8px 16px;
+            text-decoration: none;
+            border-radius: 3px;
+            font-size: 14px;
+        }
+
+        .nav-item.active {
+            background-color: #8a7968;
+        }
+
+        /* Main Container */
+        .main-container {
+            background-color: #b8a89a;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .page-title {
+            color: white;
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 40px;
+            font-weight: 300;
+        }
+
+        /* Services Grid */
+        .services-grid {
+            display: grid;
+            grid-template-columns: 1fr 300px;
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .services-content {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+        }
+
+        .service-item {
+            color: white;
+            padding: 20px 0;
+        }
+
+        .service-title {
+            font-size: 2rem;
+            font-weight: 300;
+            margin-bottom: 15px;
+            line-height: 1.2;
+        }
+
+        .service-description {
+            font-size: 1rem;
+            line-height: 1.6;
+            opacity: 0.9;
+        }
+
+        /* Images Sidebar */
+        .images-sidebar {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .service-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+
+        /* Footer */
+        .footer {
+            background-color: #a89888;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+
+        .footer-links {
+            margin-top: 10px;
+        }
+
+        .footer-links a {
+            color: #4a90e2;
+            text-decoration: none;
+            margin: 0 5px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .services-grid {
+                grid-template-columns: 1fr 250px;
+                gap: 20px;
+            }
             
-          </div>
+            .page-title {
+                font-size: 2rem;
+            }
+            
+            .service-title {
+                font-size: 1.7rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .main-container {
+                padding: 15px;
+            }
+            
+            .services-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+            
+            .images-sidebar {
+                order: -1;
+                flex-direction: row;
+                overflow-x: auto;
+                gap: 15px;
+                padding-bottom: 10px;
+            }
+            
+            .service-image {
+                min-width: 200px;
+                height: 150px;
+            }
+            
+            .page-title {
+                font-size: 1.8rem;
+                margin-bottom: 30px;
+            }
+            
+            .service-title {
+                font-size: 1.5rem;
+            }
+            
+            .header-nav {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .main-container {
+                padding: 10px;
+            }
+            
+            .page-title {
+                font-size: 1.5rem;
+            }
+            
+            .service-title {
+                font-size: 1.3rem;
+            }
+            
+            .service-description {
+                font-size: 0.9rem;
+            }
+            
+            .nav-item {
+                padding: 6px 12px;
+                font-size: 12px;
+            }
+            
+            .service-image {
+                min-width: 150px;
+                height: 120px;
+            }
+            
+            .services-content {
+                gap: 30px;
+            }
+        }
+
+        /* Miglioramenti per l'accessibilità */
+        @media (prefers-reduced-motion: reduce) {
+            * {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Navigation -->
+    <nav class="header-nav">
+        <a href="index.html" class="nav-item">Home</a>
+        <a href="about.html" class="nav-item">About Me</a>
+        <a href="myservice.html" class="nav-item active">My Services</a>
+        <a href="contact.html" class="nav-item">Contact</a>
+    </nav>
+    <style>
+        .header-nav {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .header-nav a {
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        .header-nav a:hover {
+            background-color: #8a7968;
+            color: #ffffff;
+        }
+    </style>
+    <style>
+        .header-nav {
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+    <style>
+        .header-nav {
+            background-image: linear-gradient(to right, #b8a89a, #a89888);
+            background-size: cover;
+            background-position: center;
+        }        
+    </style>                                                     
+
+    <!-- Main Container -->
+    <div class="main-container">
+        <h1 class="page-title">My Services</h1>
+        
+        <div class="services-grid">
+            <!-- Services Content -->
+            <div class="services-content">
+                <div class="service-item">
+                    <h2 class="service-title">IT Support and Remote Assistance</h2>
+                    <p class="service-description">
+                        Forniamo supporto tecnico completo e assistenza remota per risolvere rapidamente 
+                        i problemi informatici della tua azienda. Il nostro team di esperti è disponibile 
+                        per garantire che i tuoi sistemi funzionino sempre al meglio.
+                    </p>
+                </div>
+                
+                <div class="service-item">
+                    <h2 class="service-title">Automating Business Processes</h2>
+                    <p class="service-description">
+                        Ottimizziamo i processi aziendali attraverso l'automazione intelligente, 
+                        riducendo i tempi di lavoro e aumentando l'efficienza operativa. 
+                        Implementiamo soluzioni su misura per le esigenze specifiche della tua organizzazione.
+                    </p>
+                </div>
+                
+                <div class="service-item">
+                    <h2 class="service-title">Data Protection & Backup</h2>
+                    <p class="service-description">
+                        Proteggiamo i tuoi dati più preziosi con soluzioni di backup avanzate e 
+                        strategie di protezione dei dati. Garantiamo la sicurezza e la continuità 
+                        operativa della tua attività con sistemi di backup automatizzati e sicuri.
+                    </p>
+                </div>
+            </div>
+            
+            <!-- Images Sidebar -->
+            <div class="images-sidebar">
+                <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?w=300&h=200&fit=crop" 
+                     alt="IT Support" class="service-image">
+                <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=300&h=200&fit=crop" 
+                     alt="Business Automation" class="service-image">
+                <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?w=300&h=200&fit=crop" 
+                     alt="Data Protection" class="service-image">
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>© 2025 Red Connect. All rights reserved.</p>
+        <div class="footer-links">
+            <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a>
+        </div>
+    </footer>
+</body>
+</html>

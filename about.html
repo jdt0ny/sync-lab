@@ -17,10 +17,39 @@
                 <li><a href="myservice.html" class="button">My Services</a></li>
                 <li><a href="contact.html" class="button">Contact</a></li>
               </ul>
+              <style>
+                .site-navigation ul {
+                    list-style: none;
+                    padding: 0;
+                    margin: 0;
+                    display: flex;
+                    gap: 10px;
+                }
+                .site-navigation li {
+                    display: inline;
+                }
+                .site-navigation a {
+                    text-decoration: none;
+                    color: #2e2525;
+                    background-color: #b8a89a;
+                    padding: 10px 15px;
+                    border-radius: 5px;
+                }
+                .site-navigation a:hover {
+                    background-color: #a89888;
+                }
+                .site-navigation a.button {
+                    font-weight: bold;
+                    transition: background-color 0.3s ease;
+                }
+                .site-navigation a.button:hover {
+                    background-color: #8a7968;
+                }
+              </style>
             </nav>
           </header>
-        <div class="About">
-            <h1>About me</h1>
+        <div class="About" id="about" style="margin: 0 auto; display: block;">
+            <h1 class="aboutme">About me</h1>
             <p>
               I am a frontend web developer 
               with a passion for creating innovative and functional web apps.<br> 
@@ -30,21 +59,54 @@
               innovative and customised digital solutions.
             </p>
             </div>
+            <style>
+            .About {
+                background-color: #b8a89a;
+                padding: 20px;
+                text-align: center;
+                color: rgb(27, 25, 25);
+            }
+            </style>
+        <div class="main-container">               
             <div class="io">
-                   
+                          
             <img src="assets/io.png" alt="io" style="margin: 0 auto; display: block;">
           </div>
-          <h1 class="mywork">my Work</h1>
-          <p class="mywork-p">
+          <h1 class="mywork" style="width: auto;">my Work</h1>
+          <p class="mywork-p" style="margin: 0 auto; display: block;">
             I am currently curating a selection of <br>
             confidential and in-development projects.<br>
             Some public examples will soon be available <br>
             within this page.
             </p>
+            <style> 
+            .main-container {
+                background-color: #00000000;
+                padding: 20px;
+                text-align: center;
+            }
+            .io img {
+                width: auto;
+                height: auto;
+            }
+            .mywork {
+                font-size: 2em;
+                color: #2e2525;
+            }            
+            .mywork-p {
+                font-size: 1.2em;
+                color: #2e2525;
+            }
+            </style>
           <div class="footer">
             <p>&copy; 2025 Red Connect. All rights reserved.</p>
             <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
             <p>Powered by <a href="#">Tony Russo</a></p>
           </div>
+         
+ 
+
+        
     </body>
+    
 </html>

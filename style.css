@@ -16,8 +16,8 @@ img { max-width: 100%; display: block; }
     justify-content: space-between;
     align-items: center;
     padding: 20px;
-    background: color black;
-    color: white;
+    background: color var(--primary-color);
+    color: black;
   }
   @media (max-width: 768px) {
     .intro {
@@ -91,6 +91,34 @@ img { max-width: 100%; display: block; }
     top: 30px;
     left: 30px;
   }
+  .site-logo img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+  }
+  .site-logo img:hover {
+    transform: scale(1.1);
+  }
+  .logo img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+  }
+  .logo img:hover {
+    transform: scale(1.1);
+  }
+  .logo-large {
+    width: 50px;
+    height: 50px;
+  }
+  .logo-medium {
+    width: 40px;
+    height: 40px;
+  }   
   
   .logo-small {
     width: 30px;
@@ -120,22 +148,44 @@ img { max-width: 100%; display: block; }
     text-decoration: none;
     color: rgb(255, 255, 255);
   }
-  .hero h1, .hero h2, .hero h3 {
-    text-align: center;
+  .site-navigation a:hover {
     color: rgb(255, 255, 255);
+    text-decoration: underline;
+  }
+  .hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 100px 20px;
+    background: rgba(0, 0, 0, 0.5);
+    color: rgb(207, 205, 205);
+    text-align: center;
+    position: relative;
+  }
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to bottom right, #a4a7af, #e9c3aa);
+    background-size: cover;
+    background-position: center;
+    opacity: 0.5;
+    z-index: -1;
+  }
+  .hero h1, .hero h2, .hero h3 {
+    margin: 0;
+    padding: 0;
   }
   .hero h1 {
-    font-size: 2.5rem;
-    margin-bottom: 300px;
-     } 
-  .hero h2 {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
-    }
-    .hero h3 {
-      font-size: 1rem;
-      margin-bottom: 10px;
-      }
+    font-size: 3rem;
+    margin-bottom: 20px;
+  }
+
+
   .hero-image {
     display: block;
     margin: 0 auto;
@@ -143,12 +193,175 @@ img { max-width: 100%; display: block; }
     height: auto;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   }
+  .hero-logo {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 20px;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    margin: 20px auto;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+  }
+  .hero-logo img {
+    width: 180%;
+    height: 180%;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    align-self: center;
+    margin-bottom: 20px;
+
+  }
+  .hero-title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: rgb(59, 64, 73);
+    align-self: center;
+    margin-bottom: 20px;  
+    text-shadow: 0 0 10px rgb(0, 0, 0);
+  
+  }
+  .hero-subtitle {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: rgb(59, 64, 73);
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+    align-self: center;
+    margin-bottom: 20px;
+
+  }
+  .h2.hero-subtitle {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: rgb(0, 0, 0);
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+    align-self: center;
+    margin-bottom: 20px;
+
+  }
+  .hero-description {
+    font-size: 1rem;
+    margin-bottom: 20px;
+    color: rgb(59, 64, 73);
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+    align-self: center;
+    margin-bottom: 20px;
+
+  }
+  .h2  {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: rgb(0, 0, 0);
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+    align-self: center;
+    margin-bottom: 20px;
+  }
+  
+  .hero-box h1,
+.hero-box p {
+  color: #111; /* o #222, oppure un bianco intenso se lo sfondo è scuro */
+}
+
+.hero-box h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.hero-box img {
+  width: 120px;
+  height: 120px;
+  margin: 20px 0;
+}
+
+  
+  .hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  .hero-button {
+    padding: 10px 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    color: rgb(59, 64, 73);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.3s;
+  }
+  .hero-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+    background: rgba(255, 255, 255, 0.31);
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    max-width: 800px; 
+    width: 100%;
+    text-align: center;
+    color: rgb(59, 64, 73);
+  }
+  .hero-title {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: rgb(59, 64, 73);
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+    align-self: center;
+    margin-bottom: 20px;
+
+  }
+  .hero-subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: rgb(59, 64, 73);
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+    align-self: center;
+    margin-bottom: 20px;
+
+  }
+  .hero-description {
+    font-size: 1rem;
+    margin-bottom: 20px;
+    color: rgb(59, 64, 73);
+  }
+  .hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  .hero {
+    background: rgba(185, 179, 179, 0.54);
+    padding: 50px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    max-width: 800px;
+    width: 100%;
+    text-align: center;
+    color: rgb(59, 64, 73);
+  }
+  .hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+  }
+  .
   
   .hero {
     display: flex;
     padding: 200px;
     background: transparent;
-    color: rgb(255, 255, 255);  
+    color: rgb(0, 0, 0);  
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -157,10 +370,10 @@ img { max-width: 100%; display: block; }
   
   .hero h1, .hero h2, .hero h3 {
     text-align: center;
-    text-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+    text-shadow: 0 0 10px rgb(3, 2, 2);
   }
   body {
-    background-image: url('assets/sfondo.png');
+    background-image: linear-gradient(to bottom right, #a4a7af, #e9c3aa)  ;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -168,7 +381,7 @@ img { max-width: 100%; display: block; }
   .button {
     
       padding: 0;
-      background-color: #ffffff18;
+      background-color:rgba(20, 10, 10, 0.97);
       color: #000;
       border: 1px solid #000;
       border-radius: 5px;
@@ -180,6 +393,47 @@ img { max-width: 100%; display: block; }
       text-align: center;
 
 
+  }
+  .body {
+    background-color:rgb(34, 36, 41);
+    color: #000;
+    font-family: var(--font-family);
+    padding: 20px;
+  }
+  .button:hover {
+    background-color: #ccc;
+  }
+  .button {
+    padding: 0;
+    background-color:rgba(75, 68, 68, 0.19);
+    color: #000;
+    border: 1px solid #000;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: black;
+    font-size: 16px;
+    font-weight: bold;
+    display: block;    
+    text-align: center;
+  }
+  .hero-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    max-width: 800px;
+    width: 100%;
+    text-align: center;
+    color: rgb(59, 64, 73);
+  }
+  .hero-box h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
   }
 
   
@@ -228,7 +482,7 @@ img { max-width: 100%; display: block; }
   }
   .footer{
     padding: 0;
-    background-color: #ffffff18;
+    background-color:rgba(0, 0, 0, 0.26);
     color: #000;
     border: 1px solid #000;
     border-radius: 5px;
@@ -242,11 +496,11 @@ img { max-width: 100%; display: block; }
   .mywork{
     padding: 0;
     background-color: #ffffff18;
-    color: #ffffff;
+    color:rgb(0, 0, 0);
     border: 1px solid #000;
     border-radius: 5px;
     cursor: pointer;
-    text-decoration: rgb(255, 255, 255);
+    text-decoration: rgb(0, 0, 0);
     font-size: 36px;
     font-weight: bold;
     display: block;    
@@ -323,7 +577,7 @@ img { max-width: 100%; display: block; }
 .contact{
   padding: 0;
   background-color: #ffffff18;
-  color: #ffffff;
+  color:rgba(255, 255, 255, 0.59);
   border: 1px solid #000;
   border-radius: 5px;
   cursor: pointer;
@@ -333,6 +587,19 @@ img { max-width: 100%; display: block; }
   display: block;    
   text-align: center;
 }
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background-color: rgba(77, 74, 74, 0.23);
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    max-width: 600px; 
+    width: 100%;
+    text-align: center;
   .contactbutton{
     padding: 0;
     background-color: #ffffff18;

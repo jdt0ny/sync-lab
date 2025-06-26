@@ -18,18 +18,139 @@
                 <li><a href="contact.html" class="button">Contact</a></li>
               </ul>
             </nav>
+            <style>
+                .header-nav {
+                    position: sticky;
+                    top: 0;
+                    z-index: 1000;
+                }
+                .header-nav a {
+                    transition: background-color 0.3s ease, color 0.3s ease;
+                }
+                .header-nav a:hover {
+                    background-color: #8a7968;
+                    color: #ffffff;
+                }
+            </style>
+            <style>
+                .header-nav {
+                    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+                }
+            </style>
+            <style>
+                .header-nav {
+                    background-image: linear-gradient(to right, #b8a89a, #a89888);
+                    background-size: cover;
+                    background-position: center;
+                }        
+            </style> 
           </header>
-        <div class="hero">
-        <h1>Build. Solve. Grow</h1>
-        <h2>Custom web solutions and remote IT support</h2>
-        <h3>for people who want more than just a website</h3>
-        <a href="contact.html" class="button">Latstalk</a>
+          <main class="site-main">
+            <section class="hero-section">
+                <div class="hero-content">
+                  <div class="hero" >  
+                    <h2 class="hero-subtitle">Empowering Your Digital Journey</h2>
+                    <p class="hero-description">Your partner in custom web solutions and remote IT support.</p>             
+                    <h1 class="hero-title">Welcome to Red Connect</h1>
+                    
+                    <img src = "assets/Logo.png" alt="Red Connect Logo" class="hero-logo">
+                    <a href="contact.html" class="button">Get Started</a>
+                  
+                </div>
+            </section>
+        </main>
+        
         </div>
+        <div class="container">
+            <h2 class="h2">Why Choose Us?</h2>
+            <p>At Red Connect, we believe in building strong relationships with our clients. <br> Our team is committed to understanding your unique needs and delivering solutions that drive results.<br> With a focus on quality and customer satisfaction, we ensure that your online presence is not just functional but also impactful.</p>
+        </div>
+        <div class="container">
+            <h2>Get in Touch</h2>
+            <p>If you're ready to take your online presence to the next level, contact us today.<br>  We look forward to working with you!</p>
+            <a href="contact.html" class="button">Contact Us</a>
+        </div>
+      </main>
         <div class="footer">
             <p>&copy; 2025 Red Connect. All rights reserved.</p>
             <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
             <p>Powered by <a href="#">Tony Russo</a></p>
             
         </div>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            body {
+                font-family: Arial, sans-serif;
+                background-color: #f5f5f5;
+            }
+
+            .site-header {
+                background-color: #3333331f;
+                color: white;
+                padding: 10px 0;
+            }
+
+            .site-navigation ul {
+                list-style-type: none;
+                display: flex;
+                justify-content: center;
+            }
+
+            .site-navigation li {
+                margin: 0 15px;
+            }
+
+            .site-navigation a {
+                color: white;
+                text-decoration: none;
+                font-weight: bold;
+            }
+
+            .hero-section {
+                text-align: center;
+                padding: 50px 20px;
+            }
+
+            .hero-title {
+                font-size: 2.5rem;
+                margin-bottom: 20px;
+            }
+
+            .hero-subtitle, .hero-description {
+                font-size: 1.2rem;
+                margin-bottom: 10px;
+            }
+
+            .hero-logo {
+                max-width: 200px;
+                margin-top: 20px;
+            }
+
+            .button {
+                background-color: #da93939a;
+                color: white;
+                padding: 10px 20px;
+                text-decoration: black;
+                border-radius: 5px;
+            }
+
+            .container {
+                max-width: 800px;
+                margin: auto;
+                padding: 20px;
+            }
+
+            .footer {
+                text-align: center;
+                padding: 20px 0;
+                background-color: #333;
+                color: white;
+            }
+        </style>
     </body>
 </html>

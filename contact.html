@@ -12,70 +12,155 @@
         <header class="site-header">
              <nav class="site-navigation">
               <ul>
-                <li><a href="index.html" class="button">Home</a></li>
-                <li><a href="about.html" class="button">About Me</a></li>
-                <li><a href="myservice.html" class="button">My Services</a></li>
-                <li><a href="contact.html" class="button">Contact</a></li>
+                   <nav class="header-nav">
+        <a href="index.html" class="nav-item">Home</a>
+        <a href="about.html" class="nav-item">About Me</a>
+        <a href="myservice.html" class="nav-item active">My Services</a>
+        <a href="contact.html" class="nav-item">Contact</a>
+    </nav>
               </ul>
             </nav>
           </header>
-          <div class="hero">
-            <h1>Welcome to Red Connect</h1>
-          
-            <p>Contact me for personalized services tailored to your needs.</p>
-            <a href="myservice.html" class="button">Learn More</a>
-          </div>
-          <style>
-            .contact-form {
-              display: flex;
-              flex-direction: column;
-              max-width: 400px;
-              margin: auto;
-            }
-          
-            .form-field {
-              margin-bottom: 15px;
-            }
-          
-            .form-field label {
-              display: block;
-              margin-bottom: 5px;
-              color: white; /* Per compatibilità con sfondo scuro */
-            }
-          
-            .form-field input,
-            .form-field textarea {
-              width: 100%;
-              padding: 10px;
-              border-radius: 5px;
-              border: none;
-            }
-          
-            .form-field button {
-              padding: 10px;
-              background-color: #007bff;
-              color: white;
-              border: none;
-              border-radius: 5px;
-              cursor: pointer;
-            }
-          </style>
+        
+          <main class="site-main">
+            <section class="hero-section">
+                <div class="hero-content">
+                  <div class="hero">  
+                    <h2 class="hero-subtitle">Empowering Your Digital Journey</h2>
+                    <p class="hero-description">Your partner in custom web solutions and remote IT support.</p>              
+                    <h1 class="hero-title">Welcome to Red Connect</h1>
           <div class="contact">
             <h1>Contact me</h1>
-            <p>Send me a message and I will get back to you as soon as possible.</p>
+            <p class="hero-description">Send me a message and I will get back to you as soon as possible.</p>
             
-            <form>
-              <label for="name">Name:</label>
-              <input type="text" id="name" name="name" required>
-              <label for="email">Email:</label>
-              <input type="email" id="email" name="email" required>
-              <label for="message">Message:</label>
-              <textarea id="message" name="message" required></textarea>
-              <button type="submit">Send</button>
-            </form>
+     <button id="whatsapp-btn" style="background:#25D366;color:white;border:none;padding:10px 20px;border-radius:5px;">
+                    Write us on WhatsApp
+            </button>
+
+            <script>
+            // filepath: (puoi inserirlo nel tuo file HTML o JS)
+            document.getElementById('whatsapp-btn').addEventListener('click', function() {
+            const phone = '3480612139'; // Inserisci qui il tuo numero WhatsApp (senza + e spazi)
+            const text = encodeURIComponent('Ciao! Vorrei avere informazioni.');
+            window.open(`https://wa.me/message/JZMN67J2XXUCF1`, '_blank');
+            });
+            </script>
+            </section>
+                <section class="social-section">
+                    <h2>Follow Me</h2>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/t0nyrusso/" target="_blank" class="social-link">LinkedIn</a>
+                        <a href="https://github.com/jdt0ny" target="_blank" class="social-link">GitHub</a>
+                    </div>
+                    <style>
+                        .social-section {
+                            text-align: center;
+                            margin-top: 20px;
+                        }
+                        .social-links {
+                            display: flex;
+                            justify-content: center;
+                            gap: 15px;
+                        }
+                        .social-link {
+                            color: #2e2525;
+                            text-decoration: none;
+                            font-weight: bold;
+                            padding: 10px 15px;
+                            background-color: #b8a89a;
+                            border-radius: 5px;
+                        }
+                        .social-link:hover {
+                            background-color: #a89888;
+                        }   
+                    </style>
+                </div>      
+                </section>
+
           </div>
           <div class="footer">
             <p>&copy; 2025 Red Connect. All rights reserved.</p>
-            <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+            <p><a href="#">Privacy Policy</a> </p>
             <p>Powered by <a href="#">Tony Russo</a></p>
           </div>
+          <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+        }
+
+        /* Header Navigation */
+        .header-nav {
+            background-color: #b8a89a;
+            padding: 10px;
+            display: flex;
+            gap: 2px;
+        }
+
+        .nav-item {
+            background-color: #a89888;
+            color: white;
+            padding: 8px 16px;
+            text-decoration: none;
+            border-radius: 3px;
+            font-size: 14px;
+        }
+
+        .nav-item.active {
+            background-color: #8a7968;
+        }
+
+        /* Main Container */
+        .main-container {
+            background-color: #b8a89a;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .page-title {
+            color: white;
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 40px;
+            font-weight: 300;
+        }
+
+        /* Services Grid */
+        .services-grid {
+            display: grid;
+            grid-template-columns: 1fr 300px;
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .services-content {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+        }
+
+        .service-item {
+            color: white;
+            padding: 20px 0;
+        }
+
+        .service-title {
+            font-size: 2rem;
+            font-weight: 300;
+            margin-bottom: 15px;
+            line-height: 1.2;
+        }
+
+        .service-description {
+            font-size: 1rem;
+            line-height: 1.6;
+            opacity: 0.9;
+        }
+        </style>

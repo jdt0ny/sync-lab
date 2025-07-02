@@ -3,6 +3,22 @@
     --secondary-color: #e9c3aa;
     --font-family: 'Arial', sans-serif;
   }
+  /* ...existing code... */
+@media (max-width: 600px) {
+  body {
+    font-size: 16px;
+    padding: 10px;
+  }
+  .container {
+    width: 100%;
+    flex-direction: column;
+  }
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
   body {
     margin: 0;
     font-family: var(--font-family);

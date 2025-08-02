@@ -6,10 +6,39 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
         <title>Red Connect</title>
         <link rel="stylesheet" href="style.css"> 
+        <style>
+            
+            @media (max-width: 768px) {
+                .contact {
+                    padding: 0 20px;
+                    box-sizing: border-box;
+                    width: 100%;
+                    max-width: 100%;
+                    overflow-x: hidden;
+                }
+                
+                .contact h1 {
+                    font-size: 2rem;
+                    margin-top: 20px;
+                }
+                
+                .contact p.hero-description {
+                    font-size: 1rem;
+                    margin: 15px 0 25px;
+                }
+                
+                #whatsapp-btn {
+                    width: 100%;
+                    max-width: 280px;
+                    margin: 0 auto;
+                    display: block;
+                }
+            }
+        </style>
     </head>
     <body>
         <header class="site-header">
-            <!-- La navbar verrà inclusa qui tramite JavaScript -->
+            <include-navbar.js></include-navbar.js>
         </header>
         
         <main class="site-main">

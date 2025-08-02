@@ -3,109 +3,170 @@
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Red Connect</title>
-        <link rel="stylesheet" href="style.css"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <title>About Me - Red Connect</title>
+        <link rel="stylesheet" href="style.css">
+        <style>
+            .about-section {
+                padding: 60px 20px;
+                max-width: 1100px;
+                margin: 0 auto;
+                line-height: 1.8;
+                color: #333;
+            }
+            .about-header {
+                text-align: center;
+                margin: 40px 0 60px;
+                padding-top: 40px;
+            }
+            .about-header h1 {
+                color: #2e2525;
+                font-size: 3em;
+                margin: 0;
+                padding: 0 20px 20px;
+                position: relative;
+                display: inline-block;
+                font-weight: 700;
+                letter-spacing: 1px;
+            }
+            .about-header h1:after {
+                content: '';
+                display: block;
+                width: 100px;
+                height: 5px;
+                background: #b8a89a;
+                margin: 20px auto 0;
+                border-radius: 3px;
+            }
+            .about-content {
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                gap: 60px;
+                margin-bottom: 60px;
+            }
+            .about-text {
+                flex: 1;
+                min-width: 300px;
+            }
+            .intro-text {
+                font-size: 1.3em !important;
+                line-height: 1.9 !important;
+                color: #2e2525 !important;
+                margin-bottom: 30px !important;
+                position: relative;
+                padding-left: 25px;
+                border-left: 4px solid #b8a89a;
+                font-weight: 500;
+            }
+            .about-text p {
+                font-size: 1.1em;
+                line-height: 1.8;
+                color: #444;
+                margin-bottom: 25px;
+            }
+            .profile-image {
+                flex: 0 0 400px;
+                text-align: center;
+                border-radius: 10px;
+                overflow: hidden;
+                box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            }
+            .profile-image img {
+                max-width: 100%;
+                height: auto;
+                display: block;
+                transition: transform 0.3s ease;
+            }
+            .profile-image:hover img {
+                transform: scale(1.03);
+            }
+            .work-section {
+                background-color: #f9f9f9;
+                padding: 50px 30px;
+                border-radius: 10px;
+                margin-top: 60px;
+                text-align: center;
+            }
+            .work-section h2 {
+                color: #2e2525;
+                font-size: 2.2em;
+                margin-bottom: 25px;
+                position: relative;
+                display: inline-block;
+            }
+            .work-section h2:after {
+                content: '';
+                display: block;
+                width: 60px;
+                height: 3px;
+                background: #b8a89a;
+                margin: 15px auto 0;
+            }
+            .work-section p {
+                max-width: 700px;
+                margin: 0 auto 30px;
+                font-size: 1.1em;
+                color: #555;
+                line-height: 1.7;
+            }
+            @media (max-width: 900px) {
+                .about-content {
+                    flex-direction: column;
+                    gap: 40px;
+                }
+                .profile-image {
+                    flex: 0 0 auto;
+                    max-width: 400px;
+                    width: 100%;
+                }
+            }
+        </style>
     </head>
     <body>
         <header class="site-header">
-             <nav class="site-navigation">
-              <ul>
-                <li><a href="index.html" class="button">Home</a></li>
-                <li><a href="about.html" class="button">About Me</a></li>
-                <li><a href="myservice.html" class="button">My Services</a></li>
-                <li><a href="contact.html" class="button">Contact</a></li>
-              </ul>
-              <style>
-                .site-navigation ul {
-                    list-style: none;
-                    padding: 0;
-                    margin: 0;
-                    display: flex;
-                    gap: 10px;
-                }
-                .site-navigation li {
-                    display: inline;
-                }
-                .site-navigation a {
-                    text-decoration: none;
-                    color: #2e2525;
-                    background-color: #b8a89a;
-                    padding: 10px 15px;
-                    border-radius: 5px;
-                }
-                .site-navigation a:hover {
-                    background-color: #a89888;
-                }
-                .site-navigation a.button {
-                    font-weight: bold;
-                    transition: background-color 0.3s ease;
-                }
-                .site-navigation a.button:hover {
-                    background-color: #8a7968;
-                }
-              </style>
-            </nav>
-          </header>
-        <div class="About" id="about" style="margin: 0 auto; display: block;">
-            <h1 class="aboutme">About me</h1>
-            <p>
-              I am a frontend web developer 
-              with a passion for creating innovative and functional web apps.<br> 
-              I also enjoy solving technical problems 
-              and am always up-to-date on the latest IT support and cloud computing.<br> 
-              My goal is to help companies grow through 
-              innovative and customised digital solutions.
-            </p>
-            </div>
-            <style>
-            .About {
-                background-color: #b8a89a;
-                padding: 20px;
-                text-align: center;
-                color: rgb(27, 25, 25);
-            }
-            </style>
-        <div class="main-container">               
-            <div class="io">
-                          
-            <img src="assets/io.png" alt="io" style="margin: 0 auto; display: block;">
-          </div>
-          <h1 class="mywork" style="width: auto;">my Work</h1>
-          <p class="mywork-p" style="margin: 0 auto; display: block;">
-            I am currently curating a selection of <br>
-            confidential and in-development projects.<br>
-            Some public examples will soon be available <br>
-            within this page.
-            </p>
-            <style> 
-            .main-container {
-                background-color: #00000000;
-                padding: 20px;
-                text-align: center;
-            }
-            .io img {
-                width: auto;
-                height: auto;
-            }
-            .mywork {
-                font-size: 2em;
-                color: #2e2525;
-            }            
-            .mywork-p {
-                font-size: 1.2em;
-                color: #2e2525;
-            }
-            </style>
-          <div class="footer">
+            <!-- La navbar verrà inclusa qui tramite JavaScript -->
+        </header>
+        
+        <main class="site-main">
+            <section class="about-section">
+                <div class="about-header">
+                    <h1>About Me</h1>
+                </div>
+                
+                <div class="about-content">
+                    <div class="about-text">
+                        <p class="intro-text">
+                            I am a passionate frontend web developer dedicated to creating innovative and functional web applications.<br> 
+                            With a keen eye for design and a strong focus on user experience, I bring ideas to life through clean,<br> 
+                            efficient code and intuitive interfaces.
+                        </p>
+                    </div>
+                    
+                    <div class="profile-image">
+                        <img src="assets/io.png" alt="io" style="margin: 0 auto; display: block;">
+                    </div>
+                </div>
+                
+                <div class="work-section">
+                    <h2>my Work</h2>
+                    <p>
+                        I am currently curating a selection of <br>
+                        confidential and in-development projects.<br>
+                        Some public examples will soon be available <br>
+                        within this page.
+                    </p>
+                </div>
+            </section>
+        </main>
+
+        <div class="footer">
             <p>&copy; 2025 Red Connect. All rights reserved.</p>
             <p>this site may change continuously, <br>is only for personal testing purposes, <br> and does not collect any third-party data.</p>
             <p>Powered by <a href="#">Tony Russo</a></p>
-          </div>
-         
- 
+        </div>
 
-        
+        <script src="script.js"></script>
+        <script src="include-navbar.js"></script>
     </body>
-    
 </html>

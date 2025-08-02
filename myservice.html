@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="it">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Services - Responsive</title>
+    <title>My Services - Red Connect</title>
+    <link rel="stylesheet" href="style.css">
     <style>
         * {
             margin: 0;
@@ -216,40 +217,41 @@
     </style>
 </head>
 <body>
-    <!-- Header Navigation -->
-    <nav class="header-nav">
-        <a href="index.html" class="nav-item">Home</a>
-        <a href="about.html" class="nav-item">About Me</a>
-        <a href="myservice.html" class="nav-item active">My Services</a>
-        <a href="contact.html" class="nav-item">Contact</a>
-    </nav>
-    <style>
-        .header-nav {
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-        .header-nav a {
-            transition: background-color 0.3s ease, color 0.3s ease;
-        }
-        .header-nav a:hover {
-            background-color: #8a7968;
-            color: #ffffff;
-        }
-    </style>
-    <style>
-        .header-nav {
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
-    </style>
-    <style>
-        .header-nav {
-            background-image: linear-gradient(to right, #b8a89a, #a89888);
-            background-size: cover;
-            background-position: center;
-        }        
-    </style>                                                     
-
+    <header class="site-header">
+        <!-- La navbar verrà inclusa qui tramite JavaScript -->
+        <nav class="header-nav">
+            <a href="index.html" class="nav-item">Home</a>
+            <a href="about.html" class="nav-item">About Me</a>
+            <a href="myservice.html" class="nav-item active">My Services</a>
+            <a href="contact.html" class="nav-item">Contact</a>
+        </nav>
+        <style>
+            .header-nav {
+                position: sticky;
+                top: 0;
+                z-index: 1000;
+            }
+            .header-nav a {
+                transition: background-color 0.3s ease, color 0.3s ease;
+            }
+            .header-nav a:hover {
+                background-color: #8a7968;
+                color: #ffffff;
+            }
+        </style>
+        <style>
+            .header-nav {
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            }
+        </style>
+        <style>
+            .header-nav {
+                background-image: linear-gradient(to right, #b8a89a, #a89888);
+                background-size: cover;
+                background-position: center;
+            }        
+        </style>                                                     
+    </header>
     <!-- Main Container -->
     <div class="main-container">
         <h1 class="page-title">My Services</h1>
@@ -299,10 +301,12 @@
 
     <!-- Footer -->
     <footer class="footer">
-        <p>© 2025 Red Connect. All rights reserved.</p>
+        <p> 2025 Red Connect. All rights reserved.</p>
         <div class="footer-links">
             <p>this site may change continuously, <br>is only for personal testing purposes, <br> and does not collect any third-party data.</p>
         </div>
     </footer>
+    <script src="script.js"></script>
+    <script src="include-navbar.js"></script>
 </body>
 </html>

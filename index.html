@@ -6,6 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
         <title>Red Connect</title>
         <link rel="stylesheet" href="style.css"> 
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     </head>
     <body>
         <header class="site-header">
@@ -27,26 +28,54 @@
             </section>
         </main>
         
-        <div class="container">
-            <h2 class="h2">Why Choose Us?</h2>
-            <p>At Red Connect, we believe in building strong relationships with our clients. <br> Our team is committed to understanding your unique needs and delivering solutions that drive results.<br> With a focus on quality and customer satisfaction, we ensure that your online presence is not just functional but also impactful.</p>
-        </div>
-        <div class="container">
-            <h2>Get in Touch</h2>
-            <p>If you're ready to take your online presence to the next level, contact us today.<br>  We look forward to working with you!</p>
-            <a href="contact.html" class="button">Contact Us</a>
-        </div>
-      </main>
-        <div class="footer">
-            <p>&copy; 2025 Red Connect. All rights reserved.</p>
-            <p>this site may change continuously, <br>is only for personal testing purposes, <br> and does not collect any third-party data.</p>
-            <p>Powered by <a href="#">Tony Russo</a></p>
-            
-        </div>
+        <section class="features-section">
+            <div class="container">
+                <h2 class="section-title">Why Choose Red Connect?</h2>
+                <p class="section-subtitle">We combine expertise with passion to deliver outstanding results</p>
+                
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-laptop-code"></i>
+                        </div>
+                        <h3>Expertise</h3>
+                        <p>Years of experience in creating stunning and functional websites that drive results.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <h3>Responsive Design</h3>
+                        <p>Your website will look perfect on any device, from desktop to mobile.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-headset"></i>
+                        </div>
+                        <h3>24/7 Support</h3>
+                        <p>We're always here to help you with any questions or issues you might have.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-        <script src="script.js"></script>
-        <script src="include-navbar.js"></script>
+        <section class="cta-section">
+            <div class="container">
+                <div class="cta-content">
+                    <h2>Ready to Start Your Project?</h2>
+                    <p>Let's create something amazing together. Get in touch today to discuss your ideas and how we can help bring them to life.</p>
+                    <div class="cta-buttons">
+                        <a href="contact.html" class="button primary-button">Get in Touch</a>
+                        <a href="myservice.html" class="button secondary-button">Our Services</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <style>
+            /* Hero Section */
             .hero {
                 text-align: center;
                 padding: 40px 20px;
@@ -136,6 +165,195 @@
                     max-width: 150px;
                 }
             }
+
+            /* Features Section */
+            .features-section {
+                padding: 80px 0;
+                background-color: #f9f9f9;
+            }
+            
+            .section-title {
+                text-align: center;
+                font-size: 2.5rem;
+                color: #2e2525;
+                margin-bottom: 15px;
+                font-weight: 700;
+            }
+            
+            .section-subtitle {
+                text-align: center;
+                color: #b8a89a;
+                font-size: 1.2rem;
+                max-width: 700px;
+                margin: 0 auto 60px;
+                line-height: 1.6;
+            }
+            
+            .features-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+                gap: 30px;
+                margin-top: 50px;
+            }
+            
+            .feature-card {
+                background: white;
+                padding: 40px 30px;
+                border-radius: 15px;
+                text-align: center;
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            }
+            
+            .feature-card:hover {
+                transform: translateY(-10px);
+                box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+            }
+            
+            .feature-icon {
+                width: 80px;
+                height: 80px;
+                margin: 0 auto 25px;
+                background: rgba(184, 168, 154, 0.1);
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 32px;
+                color: #b8a89a;
+                transition: all 0.3s ease;
+            }
+            
+            .feature-card:hover .feature-icon {
+                background: #b8a89a;
+                color: white;
+                transform: rotateY(180deg);
+            }
+            
+            .feature-card h3 {
+                color: #2e2525;
+                margin-bottom: 15px;
+                font-size: 1.4rem;
+            }
+            
+            .feature-card p {
+                color: #666;
+                line-height: 1.6;
+                margin: 0;
+            }
+            
+            /* CTA Section */
+            .cta-section {
+                padding: 100px 0;
+                background: linear-gradient(135deg, #f5f2ef 0%, #e8e1db 100%);
+                position: relative;
+                overflow: hidden;
+            }
+            
+            .cta-section::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiB2aWV3Qm94PSIwIDAgMTI4MCAxNDAiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTAgMTAwYzEwMC0yMCAyMDAgNDAgMzAwIDIwczIwMC0xMDAgNDAwLTgwIDMwMCAxMDAgNTAwLTQwczI4MC0xMDAg0wtdjE0MEgweiIgZmlsbD0id2hpdGUiIGZpbGwtb3BhY2l0eT0iMC4xIi8+PC9zdmc+') no-repeat center top;
+                background-size: 100% 100%;
+                opacity: 0.6;
+            }
+            
+            .cta-content {
+                max-width: 800px;
+                margin: 0 auto;
+                text-align: center;
+                position: relative;
+                z-index: 1;
+            }
+            
+            .cta-content h2 {
+                font-size: 2.5rem;
+                color: #2e2525;
+                margin-bottom: 20px;
+            }
+            
+            .cta-content p {
+                color: #666;
+                font-size: 1.2rem;
+                line-height: 1.8;
+                margin-bottom: 35px;
+            }
+            
+            .cta-buttons {
+                display: flex;
+                gap: 20px;
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+            
+            .primary-button {
+                background: linear-gradient(135deg, #b8a89a, #a89888);
+                color: white;
+            }
+            
+            .secondary-button {
+                background: transparent;
+                border: 2px solid #b8a89a;
+                color: #b8a89a;
+            }
+            
+            .primary-button:hover {
+                background: linear-gradient(135deg, #a89888, #8a7968);
+                box-shadow: 0 10px 25px rgba(184, 168, 154, 0.4);
+            }
+            
+            .secondary-button:hover {
+                background: rgba(184, 168, 154, 0.1);
+            }
+            
+            @media (max-width: 768px) {
+                .section-title {
+                    font-size: 2rem;
+                }
+                
+                .section-subtitle {
+                    font-size: 1rem;
+                    padding: 0 20px;
+                }
+                
+                .features-grid {
+                    grid-template-columns: 1fr;
+                    padding: 0 20px;
+                }
+                
+                .cta-content {
+                    padding: 0 20px;
+                }
+                
+                .cta-content h2 {
+                    font-size: 2rem;
+                }
+                
+                .cta-buttons {
+                    flex-direction: column;
+                    align-items: center;
+                }
+                
+                .cta-buttons .button {
+                    width: 100%;
+                    max-width: 250px;
+                    margin: 5px 0;
+                }
+            }
         </style>
+
+        <div class="footer">
+            <p>&copy; 2025 Red Connect. All rights reserved.</p>
+            <p>this site may change continuously, <br>is only for personal testing purposes, <br> and does not collect any third-party data.</p>
+            <p>Powered by <a href="#">Tony Russo</a></p>
+            
+        </div>
+
+        <script src="script.js"></script>
+        <script src="include-navbar.js"></script>
     </body>
 </html>

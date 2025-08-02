@@ -10,7 +10,7 @@
     </head>
     <body>
         <header class="site-header">
-            <include-navbar.js></include-navbar.js>
+            <!-- Navbar verrà inclusa qui -->
         </header>
         <main class="site-main">
             <section class="hero-section">
@@ -356,4 +356,10 @@
         <script src="script.js"></script>
         <script src="include-navbar.js"></script>
     </body>
+    <script src="include-navbar.js"></script>
+<script>
+        document.addEventListener('DOMContentLoaded', function() {
+        // Questo verrà gestito da include-navbar.js
+    });
+</script>
 </html>

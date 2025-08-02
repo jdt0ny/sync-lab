@@ -953,4 +953,23 @@ body {
   .submitbutton:hover {
     background-color: #ccc;
   }
+  /* Aggiungi all'inizio del tuo file CSS */
+html {
+  scroll-padding-top: 80px; /* Altezza della tua navbar */
+}
+
+body {
+  padding-top: 80px; /* Stessa altezza della navbar */
+}
+
+/* Per dispositivi mobili */
+@media (max-width: 768px) {
+  html {
+      scroll-padding-top: 70px;
+  }
+  
+  body {
+      padding-top: 70px;
+  }
+}
 }
